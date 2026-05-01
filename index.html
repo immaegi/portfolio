@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<!--
+╔══════════════════════════════════════════════════════════════╗
+║  ✏️  직접 수정 가이드  (VS Code에서 Cmd+F로 검색하세요)        ║
+╠══════════════════════════════════════════════════════════════╣
+║                                                              ║
+║  [ 글씨체 변경 ]                                              ║
+║  → 검색: font-family                                         ║
+║  → 본문: 'Noto Sans KR' / 레트로 제목: 'VT323'               ║
+║  → 원하는 구글 폰트로 교체 가능                               ║
+║                                                              ║
+║  [ 글씨 크기 변경 ]                                           ║
+║  → 검색: font-size                                           ║
+║  → 예: 0.85rem → 1rem 으로 올리면 커짐                        ║
+║                                                              ║
+║  [ 이름 수정 ]       → 검색: ✏️이름                           ║
+║  [ 직함 수정 ]       → 검색: ✏️직함                           ║
+║  [ 소개글 수정 ]     → 검색: ✏️소개글                         ║
+║  [ 연락처 수정 ]     → 검색: ✏️연락처                         ║
+║  [ 태그 수정 ]       → 검색: ✏️태그                           ║
+║  [ 프로젝트 수정 ]   → 검색: ✏️프로젝트-[이름]                ║
+║  [ 경력 수정 ]       → 검색: ✏️경력                           ║
+║  [ 학력/자격 수정 ]  → 검색: ✏️학력                           ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+-->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>임혜교 포트폴리오</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --sky1: #a8d8ea;
+      --sky2: #c9e8f5;
+      --sky3: #e8f4fb;
+      --win-blue: #1855a3;
+      --win-blue2: #2a6dd9;
+      --win-title: #0a2f6b;
+      --win-border-light: #c8daf0;
+      --win-border-dark: #7099c5;
+      --panel-bg: rgba(255,255,255,0.88);
+      --panel-bg2: rgba(240,248,255,0.92);
+      --green-btn: #3a9e3a;
+      --green-btn2: #5bbf5b;
+      --yellow-btn: #d4a017;
+      --red-btn: #c0392b;
+      --pink: #e75480;
+      --accent-gold: #c8a84b;
+      --text: #1a1a2e;
+      --text-muted: #4a5a7a;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background:
+        /* 구름 1 - 왼쪽 */
+        radial-gradient(ellipse 110px 55px at 10% 14%, rgba(255,255,255,0.96) 0%, transparent 65%),
+        radial-gradient(ellipse 80px 45px at 13% 11%, rgba(255,255,255,0.96) 0%, transparent 65%),
+        radial-gradient(ellipse 70px 40px at 7%  17%, rgba(255,255,255,0.96) 0%, transparent 65%),
+        /* 구름 2 - 오른쪽 상단 */
+        radial-gradient(ellipse 130px 65px at 72% 7%,  rgba(255,255,255,0.95) 0%, transparent 65%),
+        radial-gradient(ellipse 100px 52px at 76% 5%,  rgba(255,255,255,0.95) 0%, transparent 65%),
+        radial-gradient(ellipse 85px  45px at 68% 10%, rgba(255,255,255,0.95) 0%, transparent 65%),
+        /* 구름 3 - 가운데 */
+        radial-gradient(ellipse 95px  50px at 42% 22%, rgba(255,255,255,0.88) 0%, transparent 65%),
+        radial-gradient(ellipse 70px  40px at 45% 19%, rgba(255,255,255,0.88) 0%, transparent 65%),
+        radial-gradient(ellipse 65px  38px at 38% 24%, rgba(255,255,255,0.88) 0%, transparent 65%),
+        /* 구름 4 - 오른쪽 중간 */
+        radial-gradient(ellipse 105px 52px at 88% 28%, rgba(255,255,255,0.85) 0%, transparent 65%),
+        radial-gradient(ellipse 80px  44px at 91% 25%, rgba(255,255,255,0.85) 0%, transparent 65%),
+        /* 초록 언덕 */
+        radial-gradient(ellipse 160% 45% at 50% 125%, #3d8c1a 0%, #52a822 22%, #6abf35 42%, #a8d860 56%, transparent 66%),
+        /* 연한 하늘 */
+        linear-gradient(180deg, #9ed4ee 0%, #b4e0f5 30%, #c8eaf8 55%, #d8f2fb 72%, #e4f6ff 82%, #d4f0e0 92%, #b8e890 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: var(--text);
+    }
+
+    /* ── IE CHROME HEADER ── */
+    .ie-chrome {
+      background: linear-gradient(180deg, #e8e8e8, #d0d0d0);
+      border-bottom: 2px solid #999;
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+    }
+    .ie-logo {
+      font-family: 'VT323', monospace;
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, #1e5fbe, #52a8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-right: 4px;
+    }
+    .ie-address-bar {
+      flex: 1;
+      background: white;
+      border: 2px inset #999;
+      padding: 2px 8px;
+      font-size: 0.8rem;
+      color: #333;
+      font-family: 'Courier New', monospace;
+    }
+    .ie-nav-btns {
+      display: flex;
+      gap: 4px;
+    }
+    .ie-btn {
+      background: linear-gradient(180deg, #f0f0f0, #d8d8d8);
+      border: 1px solid #999;
+      border-radius: 3px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      color: var(--win-title);
+      font-weight: 700;
+    }
+    .ie-btn:hover { background: linear-gradient(180deg, #e0ecff, #c0d8ff); }
+
+    /* ── MAIN LAYOUT ── */
+    .page-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 12px 40px;
+    }
+
+    /* ── WINDOW PANEL ── */
+    .win-panel {
+      background: var(--panel-bg);
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      overflow: hidden;
+      border-top: 2px solid #d0e8ff;
+      border-left: 2px solid #d0e8ff;
+      border-right: 2px solid #4870b8;
+      border-bottom: 2px solid #4870b8;
+      box-shadow: 3px 3px 6px rgba(24,60,140,0.35), inset 1px 1px 0 rgba(255,255,255,0.9);
+    }
+    .win-titlebar {
+      background: linear-gradient(90deg, var(--win-blue), var(--win-blue2) 60%, #5599ee);
+      color: white;
+      padding: 4px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .win-titlebar-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .win-icon { font-size: 1rem; }
+    .win-ctrls {
+      display: flex;
+      gap: 3px;
+    }
+    .win-ctrl {
+      width: 16px; height: 16px;
+      border-radius: 2px;
+      border: 1px solid rgba(255,255,255,0.5);
+      font-size: 0.65rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: white;
+      font-weight: 900;
+    }
+    .win-ctrl.min { background: rgba(255,255,255,0.2); }
+    .win-ctrl.max { background: rgba(255,255,255,0.2); }
+    .win-ctrl.cls { background: #cc3333; }
+    .win-body { padding: 16px; }
+
+    /* ── PROFILE SECTION ── */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .profile-photo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .profile-photo-frame {
+      border: 4px solid #22aa22;
+      border-radius: 10px;
+      box-shadow: 3px 3px 0 #007700, inset 0 0 0 2px #88ee88;
+      overflow: hidden;
+      width: 170px; height: 200px;
+      background: #ddd;
+    }
+    .profile-photo-frame img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .online-status {
+      background: #e8ffe8;
+      border: 2px solid #22aa22;
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-size: 0.72rem;
+      color: #006600;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .online-dot {
+      width: 8px; height: 8px;
+      background: #22cc22;
+      border-radius: 50%;
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    .profile-info { padding-top: 4px; }
+    .profile-name {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 700;
+      font-size: 3.2rem;
+      color: var(--win-title);
+      line-height: 1;
+      margin-bottom: 4px;
+      text-shadow: 2px 2px 0 rgba(24,85,163,0.2);
+    }
+    .profile-role {
+      color: var(--win-blue2);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .profile-tagline {
+      color: #c0392b;
+      font-size: 0.78rem;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .profile-intro-box {
+      background: #f0f8ff;
+      border: 2px solid #b8d0e8;
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .profile-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .profile-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .profile-meta-item a {
+      color: var(--win-blue2);
+      text-decoration: none;
+    }
+    .profile-meta-item a:hover { text-decoration: underline; }
+
+    /* ── TAG NAV ── */
+    .tab-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 16px;
+      background: #3a6cc8;
+      border-radius: 4px;
+      box-shadow: 3px 3px 6px rgba(24,60,140,0.4);
+      padding: 6px;
+    }
+    .tab-nav-inner {
+      display: flex;
+      flex: 1;
+      justify-content: space-around;
+      align-items: center;
+      background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 60%, #e8f0ff 100%);
+      border-radius: 2px;
+      padding: 4px 0;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 5px 14px;
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: #2a3a6a;
+      cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      border-radius: 3px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: rgba(24,85,163,0.1);
+      color: var(--win-blue);
+    }
+
+    /* ── SECTION LAYOUT ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .three-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ── RETRO LABEL ── */
+    .retro-label {
+      font-family: 'VT323', monospace;
+      font-size: 1.1rem;
+      color: white;
+      background: var(--win-blue);
+      display: inline-block;
+      padding: 0 8px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── PROJECT CARDS ── */
+    .proj-card {
+      background: var(--panel-bg2);
+      border: 2px solid var(--win-border-dark);
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow 0.15s, transform 0.15s;
+      display: flex;
+      flex-direction: column;
+    }
+    .proj-card:hover {
+      box-shadow: 4px 4px 0 var(--win-blue);
+      transform: translate(-2px,-2px);
+    }
+    .proj-card-img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+      border-bottom: 2px solid var(--win-border-dark);
+    }
+    .proj-card-img-placeholder {
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(135deg, #b8d4f0, #d8eaff);
+      border-bottom: 2px solid var(--win-border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+    .proj-card-body { padding: 10px 12px; flex: 1; }
+    .proj-card-type {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--win-blue2);
+      margin-bottom: 4px;
+    }
+    .proj-card-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .proj-card-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .proj-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 12px 8px;
+      border-top: 1px solid var(--win-border-light);
+      background: rgba(184,212,240,0.2);
+    }
+    .proj-period { font-size: 0.7rem; color: var(--text-muted); }
+
+    /* ── RETRO BUTTON ── */
+    .retro-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 100px;
+      border: none;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: white;
+      transition: filter 0.15s;
+      text-decoration: none;
+    }
+    .retro-btn:hover { filter: brightness(1.15); }
+    .btn-green { background: linear-gradient(180deg, var(--green-btn2), var(--green-btn)); }
+    .btn-blue { background: linear-gradient(180deg, #4488ee, var(--win-blue)); }
+    .btn-red { background: linear-gradient(180deg, #e05555, var(--red-btn)); }
+    .btn-gold { background: linear-gradient(180deg, #e8c060, var(--yellow-btn)); color: #3a2a00; }
+
+    /* ── TIMELINE ── */
+    .timeline { padding-left: 20px; }
+    .tl-item {
+      position: relative;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--win-border-dark);
+      border-left: 4px solid var(--win-blue2);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .tl-item::before {
+      content: '●';
+      position: absolute;
+      left: -22px;
+      top: 12px;
+      color: var(--win-blue2);
+      font-size: 0.8rem;
+    }
+    .tl-period {
+      font-size: 0.7rem;
+      color: var(--win-blue2);
+      font-weight: 700;
+      margin-bottom: 2px;
+      font-family: 'VT323', monospace;
+      font-size: 0.95rem;
+    }
+    .tl-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 2px; }
+    .tl-sub { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px; }
+    .tl-body { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
+    .tl-badge {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 2px 8px;
+      background: #fffbe6;
+      border: 1px solid var(--accent-gold);
+      border-radius: 100px;
+      font-size: 0.7rem;
+      color: #7a5a00;
+    }
+
+    /* ── SKILLS ── */
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 8px;
+    }
+    .skill-item {
+      background: linear-gradient(135deg, #e8f4ff, #d0e8ff);
+      border: 2px solid var(--win-border-dark);
+      border-radius: var(--radius);
+      padding: 10px;
+      text-align: center;
+      transition: border-color 0.15s;
+    }
+    .skill-item:hover { border-color: var(--win-blue); }
+    .skill-em { font-size: 1.4rem; margin-bottom: 4px; }
+    .skill-name { font-size: 0.82rem; font-weight: 700; margin-bottom: 2px; }
+    .skill-sub { font-size: 0.7rem; color: var(--text-muted); }
+
+    /* ── STATS WIDGET ── */
+    .stats-box {
+      background: #fffbe6;
+      border: 2px solid var(--accent-gold);
+      border-radius: var(--radius);
+      padding: 10px;
+      text-align: center;
+    }
+    .stats-box .label {
+      font-family: 'VT323', monospace;
+      font-size: 0.9rem;
+      color: #7a5a00;
+      margin-bottom: 4px;
+    }
+    .stats-box .num {
+      font-family: 'VT323', monospace;
+      font-size: 2.2rem;
+      color: var(--win-title);
+      line-height: 1;
+    }
+    .stats-box .sub { font-size: 0.7rem; color: var(--text-muted); }
+
+    /* ── CERT / EDU ITEMS ── */
+    .cert-list { display: flex; flex-direction: column; gap: 6px; }
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 10px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--win-border-light);
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+    }
+    .cert-name { font-weight: 700; }
+    .cert-date {
+      font-family: 'VT323', monospace;
+      font-size: 0.9rem;
+      color: var(--win-blue2);
+    }
+
+    /* ── VISITOR COUNTER ── */
+    .visitor-box {
+      background: #000;
+      border: 3px outset #888;
+      border-radius: 4px;
+      padding: 6px 12px;
+      text-align: center;
+      display: inline-block;
+    }
+    .visitor-label {
+      font-family: 'VT323', monospace;
+      font-size: 0.85rem;
+      color: #ffcc00;
+      display: block;
+    }
+    .visitor-num {
+      font-family: 'VT323', monospace;
+      font-size: 1.8rem;
+      color: #00ff66;
+      letter-spacing: 0.15em;
+      display: block;
+    }
+
+    /* ── CONTACT SECTION ── */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .contact-big-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+      transition: filter 0.15s, transform 0.1s;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .contact-big-btn:hover { filter: brightness(1.2); transform: translateY(-2px); }
+    .cbtn-email { background: linear-gradient(135deg, #1e7fd4, #0d4fa0); }
+    .cbtn-yt { background: linear-gradient(135deg, #ff4444, #cc0000); }
+    .cbtn-ig { background: linear-gradient(135deg, #e1306c, #833ab4); }
+
+    /* ── STATUSBAR ── */
+    .statusbar {
+      background: linear-gradient(180deg, #d8d8d8, #c0c0c0);
+      border-top: 2px solid #999;
+      padding: 4px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: #333;
+      position: sticky;
+      bottom: 0;
+      z-index: 100;
+    }
+    .statusbar-left { display: flex; align-items: center; gap: 10px; }
+    .statusbar-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0 6px;
+      border-right: 1px solid #aaa;
+    }
+    .statusbar-item:last-child { border: none; }
+    .start-btn {
+      background: linear-gradient(135deg, #4cae4c, #2d8a2d);
+      color: white;
+      border: 1px solid #1a5a1a;
+      border-radius: 3px;
+      padding: 1px 8px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(100,140,180,0.5);
+      backdrop-filter: blur(2px);
+      z-index: 300;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-win {
+      background: white;
+      border: 2px solid var(--win-blue);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 600px;
+      max-height: 85vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 6px 6px 0 rgba(24,85,163,0.4);
+    }
+    .modal-titlebar {
+      background: linear-gradient(90deg, var(--win-blue), var(--win-blue2) 60%, #5599ee);
+      color: white;
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .modal-close-btn {
+      background: #cc3333;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 2px;
+      color: white;
+      width: 18px; height: 18px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
+    .modal-body { overflow-y: auto; padding: 16px; flex: 1; }
+    .modal-imgs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      overflow-x: auto;
+      justify-content: center;
+    }
+    .modal-imgs img {
+      height: 257px;
+      width: auto;
+      max-width: 372px;
+      object-fit: cover;
+      border: 2px solid var(--win-border-dark);
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .modal-type {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--win-blue2);
+      margin-bottom: 4px;
+    }
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      margin-bottom: 3px;
+    }
+    .modal-period {
+      font-family: 'VT323', monospace;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+    .modal-sec { margin-bottom: 12px; }
+    .modal-sec-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--win-border-light);
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+    }
+    .modal-sec p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+    .modal-sec p strong { color: var(--text); }
+    .modal-footer {
+      padding: 10px 16px;
+      border-top: 1px solid var(--win-border-light);
+      background: #f0f8ff;
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ── DECORATIVE STARS ── */
+    .sparkle { color: var(--accent-gold); font-size: 1rem; animation: spin 4s linear infinite; display: inline-block; }
+    @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:700px){
+      .profile-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .three-col { grid-template-columns: 1fr 1fr; }
+      .ie-address-bar { display: none; }
+    }
+    @media(max-width:480px){
+      .three-col { grid-template-columns: 1fr; }
+    }
+
+    /* scrollbar retro */
+    ::-webkit-scrollbar { width: 14px; }
+    ::-webkit-scrollbar-track { background: #d0d0d0; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #a0b8d8, #6080b0); border: 2px solid #d0d0d0; }
+  </style>
+</head>
+<body>
+
+<!-- ══ IE CHROME ══ -->
+<div class="ie-chrome">
+  <span class="ie-logo">e</span>
+  <div class="ie-nav-btns">
+    <button class="ie-btn">◀</button>
+    <button class="ie-btn">▶</button>
+    <button class="ie-btn">⟳</button>
+  </div>
+  <div class="ie-address-bar">http://hye-portfolio.vercel.app/</div>
+  <div class="ie-nav-btns">
+    <button class="ie-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Projects</button>
+    <button class="ie-btn" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">Career</button>
+    <button class="ie-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+  <!-- ══ PROFILE PANEL ══ -->
+  <div class="win-panel" id="about">
+    <div class="win-titlebar">
+      <div class="win-titlebar-left">
+        <span class="win-icon">👤</span>
+        <span>임혜교 — Profile.exe</span>
+      </div>
+      <div class="win-ctrls">
+        <div class="win-ctrl min">─</div>
+        <div class="win-ctrl max">□</div>
+        <div class="win-ctrl cls">✕</div>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="profile-grid">
+        <div class="profile-photo-wrap">
+          <div class="profile-photo-frame">
+            <img src="images/profile.jpg" alt="임혜교 프로필 사진"/>
+          </div>
+          <div class="online-status">
+            <div class="online-dot"></div>
+            ONLINE · 구직 중
+          </div>
+          <div class="visitor-box" style="margin-top:8px;">
+            <span class="visitor-label">visitor no.</span>
+            <span class="visitor-num">001337</span>
+          </div>
+        </div>
+        <div class="profile-info">
+          <!-- ✏️이름 -->
+          <div class="profile-name">임혜교</div>
+          <!-- ✏️직함 -->
+          <div class="profile-role">A&R · 콘텐츠 기획 · 영상 제작</div>
+          <!-- ✏️부제 (날짜·지역 등) -->
+          <!-- ✏️소개글 -->
+          <div class="profile-intro-box">
+            음악을 기획하고 영상을 만듭니다. 단국대 <strong>경영학 + 영상콘텐츠학 복수전공</strong>으로 비즈니스 감각과 제작 능력을 함께 키웠습니다.<br>
+            국내외 밴드 공연 기획, RBW 마스터클래스 <strong>우수 연수생</strong>,
+            뮤직비디오 조감독까지 — 기획부터 현장까지 책임지겠습니다.
+          </div>
+          <!-- ✏️연락처 -->
+          <div class="profile-meta">
+            <div class="profile-meta-item">✉ <a href="mailto:hkhklove27@gmail.com">hkhklove27@gmail.com</a></div>
+            <div class="profile-meta-item">📱 010-3265-3898</div>
+            <div class="profile-meta-item">🎓 단국대 경영학 + 영상콘텐츠학 복수전공 (3.83/4.5)</div>
+            <div class="profile-meta-item">▶ <a href="https://www.youtube.com/@임매리00" target="_blank">YouTube 커버채널 '임매리'</a></div>
+          </div>
+          <!-- ✏️태그 (추가/삭제/수정 가능) -->
+          <div style="margin-top:14px; display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="background:#e8f0ff;border:1px solid #aac;border-radius:100px;padding:3px 10px;font-size:0.75rem;color:var(--win-title);">A&R</span>
+            <span style="background:#e8f0ff;border:1px solid #aac;border-radius:100px;padding:3px 10px;font-size:0.75rem;color:var(--win-title);">콘텐츠 기획</span>
+            <span style="background:#e8f0ff;border:1px solid #aac;border-radius:100px;padding:3px 10px;font-size:0.75rem;color:var(--win-title);">영상 제작</span>
+            <span style="background:#e8f0ff;border:1px solid #aac;border-radius:100px;padding:3px 10px;font-size:0.75rem;color:var(--win-title);">SNS 운영</span>
+            <span style="background:#e8f0ff;border:1px solid #aac;border-radius:100px;padding:3px 10px;font-size:0.75rem;color:var(--win-title);">공연 기획</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TAB NAV ══ -->
+  <div class="tab-nav">
+    <div class="tab-nav-inner">
+      <a class="tab-btn" href="#about">About</a>
+      <a class="tab-btn" href="#projects">Projects</a>
+      <a class="tab-btn" href="#experience">Career</a>
+      <a class="tab-btn" href="#skills">Skills</a>
+      <a class="tab-btn" href="#education">Education</a>
+      <a class="tab-btn" href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- ══ PROJECTS ══ -->
+  <div class="win-panel" id="projects">
+    <div class="win-titlebar">
+      <div class="win-titlebar-left">
+        <span class="win-icon">📁</span>
+        <span>Projects — 9 items</span>
+      </div>
+      <div class="win-ctrls">
+        <div class="win-ctrl min">─</div>
+        <div class="win-ctrl cls">✕</div>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="retro-label">✦ 주요 프로젝트</div>
+      <div class="three-col">
+
+        <!-- 1. RBW -->
+        <div class="proj-card" onclick="openModal('k')">
+          <img class="proj-card-img" src="images/rbw1.jpg" alt="RBW 마스터클래스"/>
+          <div class="proj-card-body">
+            <div class="proj-card-type">앨범 기획 · A&R</div>
+            <div class="proj-card-title">RBW 엔터 비즈니스 마스터 클래스</div>
+            <div class="proj-card-desc">서울 5개 지역을 음식으로 연결. 기획~비주얼~보도자료 전 과정.</div>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-period">2025.04~06 · RBW</span>
+            <button class="retro-btn btn-red">보기 →</button>
+          </div>
+        </div>
+
+        <!-- 2. 뮤직비디오 -->
+        <div class="proj-card" onclick="openModal('l')">
+          <img class="proj-card-img" src="images/mv1.jpg" alt="Brad 뮤직비디오"/>
+          <div class="proj-card-body">
+            <div class="proj-card-type">뮤직비디오 · 현장 PM</div>
+            <div class="proj-card-title">래퍼 Brad 뮤직비디오 조감독</div>
+            <div class="proj-card-desc">12시간+ 밤샘 촬영 완주. 체력과 팀워크로 끝까지 즐겁게 버텼습니다.</div>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-period">2024 · 힙합 MV</span>
+            <button class="retro-btn btn-red">보기 →</button>
+          </div>
+        </div>
+
+        <!-- 3. 헬키푸키 -->
+        <div class="proj-card" onclick="openModal('c')">
+          <img class="proj-card-img" src="images/helki.png" alt="헬키푸키"/>
+          <div class="proj-card-body">
+            <div class="proj-card-type">SNS 마케팅 · 브랜드</div>
+            <div class="proj-card-title">헬키푸키 인스타그램 운영</div>
+            <div class="proj-card-desc">다이어트 식품 브랜드 SNS 운영 + 매출 데이터 관리.</div>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-period">2020.12~2021.12</span>
+            <button class="retro-btn btn-red">보기 →</button>
+          </div>
+        </div>
+
+        <!-- 4. 산홀로 -->
+        <div class="proj-card" onclick="openModal('m')">
+          <img class="proj-card-img" src="images/sanhollo.png" alt="산홀로 상세페이지"/>
+          <div class="proj-card-body">
+            <div class="proj-card-type">디자인 · 공연 홍보</div>
+            <div class="proj-card-title">산홀로 티켓 상세페이지 & 포스터</div>
+            <div class="proj-card-desc">공연 티켓 페이지 디자인 & 포스터 단독 제작.</div>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-period">2025 · Ps / Ai</span>
+            <button class="retro-btn btn-red">보기 →</button>
+          </div>
+        </div>
+
+        <!-- 5. 임매리 -->
+        <div class="proj-card" onclick="openModal('j')">
+          <img class="proj-card-img" src="images/cover_yt.png" alt="커버 유튜브"/>
+          <div class="proj-card-body">
+            <div class="proj-card-type">유튜브 채널 · 영상 제작</div>
+            <div class="proj-card-title">커버 유튜브 채널 '임매리' 운영</div>
+            <div class="proj-card-desc">음악 커버 영상 기획·촬영·편집 1인 전담 운영 중.</div>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-period">2025.02~ · 운영 중</span>
+            <button class="retro-btn btn-red">보기 →</button>
+          </div>
+        </div>
+
+        <!-- 6. 임바질 -->
+        <div class="proj-card" onclick="openModal('a')">
+          <img class="proj-card-img" src="images/fashion1.jpg" alt="패션 유튜브"/>
+          <div class="proj-card-body">
+            <div class="proj-card-type">유튜브 · SNS 운영</div>
+            <div class="proj-card-title">패션 유튜브 채널 '임바질' 운영</div>
+            <div class="proj-card-desc">패션·브이로그 기획~편집~업로드 1인 전담, 멀티채널 병행.</div>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-period">2020~ · Premiere Pro</span>
+            <button class="retro-btn btn-red">보기 →</button>
+          </div>
+        </div>
+
+        <!-- 7. 노르웨이 -->
+        <div class="proj-card" onclick="openModal('f')">
+          <img class="proj-card-img" src="images/band.png" alt="밴드 활동"/>
+          <div class="proj-card-body">
+            <div class="proj-card-type">공연 기획 · 글로벌</div>
+            <div class="proj-card-title">국내외 밴드 활동</div>
+            <div class="proj-card-desc">5개국 밴드 취향 충돌·언어 장벽을 공통 무드로 해결.</div>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-period">2023.08~12 · 교환학생</span>
+            <button class="retro-btn btn-red">보기 →</button>
+          </div>
+        </div>
+
+        <!-- 8. 정관장 -->
+        <div class="proj-card" onclick="openModal('g')">
+          <img class="proj-card-img" src="images/junggwanjang.png" alt="정관장 공모전"/>
+          <div class="proj-card-body">
+            <div class="proj-card-type">마케팅 기획 · 공모전</div>
+            <div class="proj-card-title">제일기획 공모전 — 정관장 마케팅 기획</div>
+            <div class="proj-card-desc">브랜드 분석→타겟 설정→기획안 작성 전 과정 직접 수행.</div>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-period">2024.08~09</span>
+            <button class="retro-btn btn-red">보기 →</button>
+          </div>
+        </div>
+
+        <!-- 9. 누잭팟 -->
+        <div class="proj-card" onclick="openModal('o')">
+          <img class="proj-card-img" src="images/nujakpot.jpg" alt="누잭팟 서포터즈"/>
+          <div class="proj-card-body">
+            <div class="proj-card-type">숏폼 · 패션 콘텐츠</div>
+            <div class="proj-card-title">누잭팟 서포터즈 1기 — 숏폼 패션</div>
+            <div class="proj-card-desc">숏폼 플랫폼 특성 분석 → 전용 편집 방식 적용 수료.</div>
+          </div>
+          <div class="proj-card-footer">
+            <span class="proj-period">2022.12</span>
+            <button class="retro-btn btn-red">보기 →</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ EXPERIENCE ══ -->
+  <div class="two-col">
+    <div class="win-panel" id="experience">
+      <div class="win-titlebar">
+        <div class="win-titlebar-left">
+          <span class="win-icon">📋</span>
+          <span>Career & Activity</span>
+        </div>
+        <div class="win-ctrls"><div class="win-ctrl cls">✕</div></div>
+      </div>
+      <div class="win-body">
+        <div class="retro-label">✦ 경력 & 활동</div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-period">2025.04 — 2025.06</div>
+            <div class="tl-title">RBW 엔터비즈니스 마스터클래스</div>
+            <div class="tl-sub">앨범 '여름맛 서울' 기획 팀장</div>
+            <div class="tl-body">앨범 커버 디자인, 숏폼 2종 편집, 보도자료 2종 작성을 담당했습니다. 특강에서 "팀 중에서 리드를 가장 잘 구성했다"는 평가</div>
+            <span class="tl-badge">⭐ 우수 연수생 선정</span>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-period">2022 · 1년</div>
+            <div class="tl-title">헬키푸키 — 알바생 → 브랜딩 담당자</div>
+            <div class="tl-sub">다이어트 식품 브랜드 · 정식 채용 전환</div>
+            <div class="tl-body">배달 리뷰·검색 키워드 분석 → 메뉴 설명·브랜딩 문구 전면 재구성. 작성 카피 전국 31개 매장 표준 가이드로 채택.</div>
+            <span class="tl-badge">알바 → 정식 채용 전환</span>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-period">2022.03 — 2025.02</div>
+            <div class="tl-title">단국대 뮤즈 밴드부 임원</div>
+            <div class="tl-sub">정기 콘서트 기획·홍보 · 3년</div>
+            <div class="tl-body">세트리스트 구성, 무대 섭외, SNS 홍보 포스터 제작 전 과정 담당. 월 1~2회 공연 관람하며 무대 연출 트래킹.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-period">2024.09.13</div>
+            <div class="tl-title">신한은행 광고 촬영 보조</div>
+            <div class="tl-sub">신한 유언대용신탁 광고</div>
+            <div class="tl-body">촬영 보조로 참여. 현장 흐름 및 콘텐츠 제작 프로세스 이해.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-period">2024.08 — 2024.09</div>
+            <div class="tl-title">제일기획 공모전 — 마케팅 기획안</div>
+            <div class="tl-sub">정관장 브랜드 분석 및 기획</div>
+            <div class="tl-body">브랜드 분석 → 타겟 설정 → 마케팅 기획안 작성 프로세스 전체 수행. 결과보다 기획 구조 수립 과정 자체를 경험.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-period">2024</div>
+            <div class="tl-title">래퍼 Brad 뮤직비디오 조감독</div>
+            <div class="tl-sub">힙합 MV 조감독</div>
+            <div class="tl-body">래퍼 Brad의 뮤직비디오 조감독을 맡아 전반적인 프로세스를 경험.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-period">2023.08 — 2023.12</div>
+            <div class="tl-title">노르웨이 교환학생 — 다국적 밴드</div>
+            <div class="tl-sub">Inland Norway University · 해외밴드 운영</div>
+            <div class="tl-body">한국, 노르웨이, 독일, 네덜란드 국적으로 구성된 국외 밴드 운영 경험. 귀국 후 OPIc IH를 취득.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-period">2022.03 — 2022.12</div>
+            <div class="tl-title">국제관 근로장학생</div>
+            <div class="tl-sub">유학생 행정 통역 지원 · 1년</div>
+            <div class="tl-body">다양한 국적 유학생 통역·행정 보조. 언어 장벽 상황에서도 정확한 정보 전달과 배려 있는 태도로 신뢰 형성.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-period">2022.11~</div>
+            <div class="tl-title">교육혁신 서포터즈</div>
+            <div class="tl-sub">중고생 타겟 교육 영상 제작</div>
+            <div class="tl-body">타겟 오디언스 니즈 역분석 → 기획·편집에 반영.</div>
+            <span class="tl-badge">우수팀 선정</span>
+          </div>
+
+
+          <div class="tl-item">
+            <div class="tl-period">2023.01 — 2023.07</div>
+            <div class="tl-title">헬스장 아르바이트</div>
+            <div class="tl-sub">카드뉴스 & 블로그 운영</div>
+            <div class="tl-body">매주 카드뉴스 제작 + 네이버 블로그 발행 (7개월 · 매주 정기 발행). 검색 노출 고려한 글쓰기 방식 적용.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ SKILLS + EDUCATION ══ -->
+    <div>
+      <!-- SKILLS -->
+      <div class="win-panel" id="skills">
+        <div class="win-titlebar">
+          <div class="win-titlebar-left">
+            <span class="win-icon">🛠</span>
+            <span>Skills & Tools</span>
+          </div>
+          <div class="win-ctrls"><div class="win-ctrl cls">✕</div></div>
+        </div>
+        <div class="win-body">
+          <div class="retro-label">✦ 스킬</div>
+          <div class="skill-grid">
+            <div class="skill-item">
+              <div class="skill-em">🎬</div>
+              <div class="skill-name">Premiere Pro</div>
+              <div class="skill-sub">영상 편집 · MV · 숏폼</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-em">🖼</div>
+              <div class="skill-name">Photoshop</div>
+              <div class="skill-sub">편집 · 디자인 · GTQ 1급</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-em">✏️</div>
+              <div class="skill-name">Illustrator</div>
+              <div class="skill-sub">포스터 · 로고 · 벡터</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-em">🎵</div>
+              <div class="skill-name">Logic Pro</div>
+              <div class="skill-sub">MIDI · 데모 제작</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-em">📋</div>
+              <div class="skill-name">Notion</div>
+              <div class="skill-sub">프로젝트 관리</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-em">📊</div>
+              <div class="skill-name">Excel / PPT</div>
+              <div class="skill-sub">데이터 · 기획안</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-em">🤖</div>
+              <div class="skill-name">Claude Code</div>
+              <div class="skill-sub">바이브 코딩 · 웹 제작</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="win-panel" id="education">
+        <div class="win-titlebar">
+          <div class="win-titlebar-left">
+            <span class="win-icon">🎓</span>
+            <span>Education & Certifications</span>
+          </div>
+          <div class="win-ctrls"><div class="win-ctrl cls">✕</div></div>
+        </div>
+        <div class="win-body">
+          <div class="retro-label">✦ 학력</div>
+          <div class="cert-list" style="margin-bottom:12px;">
+            <div class="cert-item">
+              <span class="cert-name">단국대학교 경영학 + 영상콘텐츠학 복수전공</span>
+              <span class="cert-date">2020~2025</span>
+            </div>
+          </div>
+          <div class="retro-label">✦ 자격 & 어학</div>
+          <div class="cert-list">
+            <div class="cert-item">
+              <span class="cert-name">GTQ 포토샵 1급</span>
+              <span class="cert-date">2022.09</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">OPIc IH</span>
+              <span class="cert-date">2024.07</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">TOEIC 830</span>
+              <span class="cert-date">2024.11</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">IELTS 5.0</span>
+              <span class="cert-date">2023.02</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">운전면허 2종 보통</span>
+              <span class="cert-date">2025.03</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="win-panel">
+        <div class="win-titlebar">
+          <div class="win-titlebar-left">
+            <span class="win-icon">📊</span>
+            <span>Stats</span>
+          </div>
+          <div class="win-ctrls"><div class="win-ctrl cls">✕</div></div>
+        </div>
+        <div class="win-body">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+            <div class="stats-box">
+              <div class="label">기획력</div>
+              <div class="num" style="font-size:1.1rem;letter-spacing:0.05em;">★★★★★</div>
+              <div class="sub">A&amp;R · 콘텐츠 · 공연</div>
+            </div>
+            <div class="stats-box">
+              <div class="label">실행력</div>
+              <div class="num" style="font-size:1.1rem;letter-spacing:0.05em;">★★★★★</div>
+              <div class="sub">기획부터 납품까지</div>
+            </div>
+            <div class="stats-box">
+              <div class="label">협업력</div>
+              <div class="num" style="font-size:1.1rem;letter-spacing:0.05em;">★★★★★</div>
+              <div class="sub">5개국 · 팀장 경험</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CONTACT ══ -->
+  <div class="win-panel" id="contact">
+    <div class="win-titlebar">
+      <div class="win-titlebar-left">
+        <span class="win-icon">✉</span>
+        <span>Contact — 함께 일해요</span>
+      </div>
+      <div class="win-ctrls"><div class="win-ctrl cls">✕</div></div>
+    </div>
+    <div class="win-body" style="text-align:center; padding:30px 16px;">
+      <div style="font-family:'VT323',monospace;font-size:2rem;color:var(--win-title);margin-bottom:8px;">
+        ✦ LET'S WORK TOGETHER ✦
+      </div>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:20px;">
+        음악, 콘텐츠, 영상 관련 프로젝트라면 언제든 연락주세요.
+      </p>
+      <div class="contact-links" style="justify-content:center;">
+        <a href="mailto:hkhklove27@gmail.com" class="contact-big-btn cbtn-email">✉ 이메일</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<!-- ══ STATUS BAR ══ -->
+<div class="statusbar">
+  <div class="statusbar-left">
+    <div class="start-btn">▶ Start</div>
+    <div class="statusbar-item">🌐 인터넷 연결됨</div>
+    <div class="statusbar-item">✅ 포트폴리오 로드 완료</div>
+  </div>
+  <div style="font-family:'VT323',monospace;font-size:0.9rem;color:#333;" id="clock"></div>
+</div>
+
+<!-- ══ MODAL ══ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeBg(event)">
+  <div class="modal-win">
+    <div class="modal-titlebar">
+      <span id="mWinTitle">프로젝트 상세</span>
+      <div class="modal-close-btn" onclick="closeModal()">✕</div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-imgs" id="mImgs"></div>
+      <div class="modal-type" id="mType"></div>
+      <div class="modal-title" id="mTitle"></div>
+      <div class="modal-period" id="mPeriod"></div>
+      <div class="modal-sec">
+        <div class="modal-sec-label">프로젝트 개요</div>
+        <p id="mSit"></p>
+      </div>
+      <div class="modal-sec">
+        <div class="modal-sec-label">주요 작업</div>
+        <p id="mAct"></p>
+      </div>
+      <div class="modal-sec">
+        <div class="modal-sec-label">핵심 성과</div>
+        <p id="mRes"></p>
+      </div>
+    </div>
+    <div class="modal-footer" id="mFooter"></div>
+  </div>
+</div>
+
+<script>
+// ── CLOCK ──
+function tick(){
+  const now=new Date();
+  document.getElementById('clock').textContent=
+    now.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'});
+}
+tick(); setInterval(tick,1000);
+
+// ── PROJECT DATA ──
+let P = {};
+fetch('content.json')
+  .then(r => r.json())
+  .then(data => { P = data; });
+
+function openModal(id){
+  const p=P[id];
+  if(!p) return;
+  document.getElementById('mWinTitle').textContent=p.title;
+  document.getElementById('mType').textContent=p.type;
+  document.getElementById('mTitle').textContent=p.title;
+  document.getElementById('mPeriod').textContent=p.period;
+  document.getElementById('mSit').textContent=p.sit;
+  document.getElementById('mAct').textContent=p.act;
+  document.getElementById('mRes').innerHTML=p.res;
+
+  const imgsEl=document.getElementById('mImgs');
+  imgsEl.innerHTML='';
+  (p.imgs||[]).forEach(src=>{
+    const img=document.createElement('img');
+    img.src=src; img.alt='';
+    imgsEl.appendChild(img);
+  });
+
+  const footer=document.getElementById('mFooter');
+  footer.innerHTML='';
+  if(p.link){
+    const a=document.createElement('a');
+    a.href=p.link; a.target='_blank';
+    a.className='retro-btn btn-blue';
+    a.textContent=p.linkText;
+    footer.appendChild(a);
+  }
+  if(p.extraLinks){
+    p.extraLinks.forEach(l=>{
+      const a=document.createElement('a');
+      a.href=l.url; a.target='_blank';
+      a.className='retro-btn btn-blue';
+      a.textContent=l.text;
+      footer.appendChild(a);
+    });
+  }
+  const closeBtn=document.createElement('button');
+  closeBtn.className='retro-btn btn-red';
+  closeBtn.textContent='창 닫기 ✕';
+  closeBtn.onclick=closeModal;
+  footer.appendChild(closeBtn);
+
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeBg(e){
+  if(e.target===document.getElementById('modalOverlay')) closeModal();
+}
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+</script>
+</body>
+</html>
