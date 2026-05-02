@@ -51,7 +51,11 @@
     "sit": "대학 밴드부 임원으로 활동했으며, 노르웨이 교환학생 기간에는 4개국 멤버로 구성된 현지 밴드에 합류해 공연을 진행했습니다.",
     "act": "<strong>▸ 대학 밴드부</strong><br>• 밴드부 임원으로써 공연 참여 및 주관<br>• 공연 영상 및 홍보 콘텐츠 기획 (포스터/영상/사진)<br><br><strong>▸ 교환학생 밴드부</strong><br>• 공연용 편곡 및 보컬 참여<br>• 공연 세팅(사운드 체크, 무대 구성) 및 현장 운영 보조",
     "res": "• <strong>3년간 대학 밴드부 임원</strong> — 공연 기획·홍보 전 과정 주도<br>• 국내외 공연 완성<br>• OPIc IH 취득(2024.07)",
-    "link": null
+    "link": null,
+    "extraLinks": [
+      { "url": "https://www.instagram.com/dku_muse/", "text": "국내 밴드 →" },
+      { "url": "https://www.instagram.com/musikkgruppa_inn_lillehammer", "text": "해외 밴드 →" }
+    ]
   },
   "m": {
     "type": "디자인 · 공연 홍보",
